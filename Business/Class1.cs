@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Contract
+namespace Business
 {
     public class Class1
     {
