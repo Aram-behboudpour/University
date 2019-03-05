@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Host.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]/[action]")]
     [ApiController]
-    public class StudentController:ControllerBase
+    public class ClassController:ControllerBase
     {
 
     }
