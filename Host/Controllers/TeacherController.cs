@@ -10,5 +10,7 @@ namespace Host.Controllers
     [ApiController]
     public class TeacherController : ControllerBase
     {
+
+
     }
 }
