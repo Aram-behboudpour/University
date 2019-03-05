@@ -17,5 +17,7 @@ namespace Contract
         public int Floor { get; set; }
 
         public int Area { get; set; }
+
+        public int Chair { get; set; }
     }
 }
