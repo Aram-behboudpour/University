@@ -34,7 +34,6 @@ namespace Business
             {
                 return 0;
             }
-
         }
     }
 }
