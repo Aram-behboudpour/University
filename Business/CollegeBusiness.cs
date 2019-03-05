@@ -9,6 +9,7 @@ namespace Business
     {
         public string WelcomeMessage(CollegeModel collegeModel)
         {
+
             return $"Dear student, welcome to {collegeModel.Name} College.";
         }
         public string MaxSizeReached(CollegeModel collegeModel)
