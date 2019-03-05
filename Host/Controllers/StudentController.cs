@@ -10,6 +10,10 @@ namespace Host.Controllers
     [ApiController]
     public class StudentController:ControllerBase
     {
+        public void Add()
+        {
+
+        }
 
     }
 }
