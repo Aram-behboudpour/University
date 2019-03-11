@@ -34,6 +34,7 @@ namespace University.UnitTest
 
             //Assert
             Assert.Equal($"The course {fakeModel.Course} has reached the maximum size of capacity", actualResult);
+
         }
 
         [Theory]
