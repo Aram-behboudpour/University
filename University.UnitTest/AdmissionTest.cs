@@ -54,7 +54,7 @@ namespace University.UnitTest
             var actualResult = fakeAdmissionLogic.CourseSpecification(fakeModel);
 
             //Assert
-            Assert.Equal($"The Course '{fakeModel.Course}' will carry out in {fakeModel.Duration} hours with the number of {fakeModel.CapacityOfStudents} Students", actualResult);
+            Assert.NotEqual($"The Course '{fakeModel.Course}' will carry out in {fakeModel.Duration} hours with the number of {fakeModel.CapacityOfStudents} Students", actualResult);
         }
          
        [Fact]
