@@ -1,0 +1,48 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+jobs:
+- job: Linux
+
+  pool:
+   vmImage: 'Ubuntu-16.04'
+
+  steps:
+  - task: DotNetCoreInstaller@0
+    inputs:
+      packageType: 'sdk'
+      version: '2.2.100'
+
+  - script: 'dotnet clean'
+    displayName: Server - Clean
+    
+  - script: 'dotnet build'
+    displayName: Server - Build
+    
+  - script: 'dotnet test'
+    displayName: Server - Test    
+    
+- job: Windows
+
+  pool:
+   vmImage: 'vs2017-win2016'
+
+  steps:
+  - task: DotNetCoreInstaller@0
+    inputs:
+      packageType: 'sdk'
+      version: '2.2.100'
+
+  - script: 'dotnet clean'
+    displayName: Server - Clean
+    
+  - script: 'dotnet build'
+    displayName: Server - Build
+    
+  - script: 'dotnet test'
+    displayName: Server - Test     
