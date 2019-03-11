@@ -1,15 +1,16 @@
 trigger:
-  - master
+ - master
  
- jobs:
-  - job: Linux
-  pool: 
-    vmImage: 'ubuntu-16-04'
-  steps: 
-    - task: 'DotNetCoreInstaller@0'
-      inputs: 
-        packageType: 'sdk'
-        version: '2.2.100'
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
     
-     - script: 'dotnet clean'
-       displayName: Server - Clean
+  steps:
+  - task: DotNetCoreInstaller@0
+    inputs:
+      packageType: 'sdk' 
+      version: '2.2.100' 
+
+  - script: 'dotnet clean $(backendDirName)/server.sln'
+    displayName: Server - Clean
