@@ -11,6 +11,8 @@ namespace Contract
 
         public string Course { get; set; }
 
+        public int Duration { get; set; }
+
         public DateTime DateOfClose { get; set; }
 
         public DateTime DateOfReopen { get; set; }

@@ -12,10 +12,30 @@ namespace Business
             string result = string.Empty;
 
             if (model.NumberOfSubmittedStudents > model.CapacityOfStudents)
-                result = string.Format("The course {0} has reached to the maximum size of capacity",model.Course);
-            
+                result = $"The course {model.Course} has reached the maximum size of capacity";
+
             return result;
         }
-        
+
+        public string CourseSpecification(AdmissionModel model)
+        {
+            return $"The Course '{model.Course}' will carry out in {model.Duration} hours with the number of {model.CapacityOfStudents} Students";
+        }
+
+        public string GetPersianCloseDate(AdmissionModel model)
+        {
+            System.Globalization.PersianCalendar pdate = new System.Globalization.PersianCalendar();
+            var closeYear = pdate.GetYear(model.DateOfClose);
+            var closeMonth = pdate.GetMonth(model.DateOfClose);
+            var closeDay = pdate.GetDayOfMonth(model.DateOfClose);
+            return $"{closeYear}/{closeMonth.ToString().PadLeft('0')}/{closeDay.ToString().PadLeft('0')}";
+        }
+
+        public DateTime GetGeorgianCloseDate(AdmissionModel model)
+        {
+            return model.DateOfClose;
+        }
+
+
     }
 }
