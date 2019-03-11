@@ -14,3 +14,9 @@ jobs:
 
   - script: 'dotnet clean'
     displayName: Server - Clean
+
+  - script: 'dotnet build'
+    displayName: Server - Build
+
+  - script: 'dotnet test'
+    displayName: Server - Test        
