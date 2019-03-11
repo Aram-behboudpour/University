@@ -12,11 +12,11 @@ jobs:
   pool:
    vmImage: 'Ubuntu-16.04'
 
-steps:
-- task: DotNetCoreInstaller@0
-  inputs:
-    packageType: 'sdk'
-    version: '2.2.100'
+  steps:
+  - task: DotNetCoreInstaller@0
+    inputs:
+      packageType: 'sdk'
+      version: '2.2.100'
 
-- script: 'dotnet clean'
-  displayName: Server - Clean
+  - script: 'dotnet clean'
+    displayName: Server - Clean
